@@ -162,9 +162,9 @@ class Metadata:
                 number=number,
                 parallel=20,
                 get_type=type,
-                artist=self.artist,
-                title=self.title,
-                album=self.album
+                artist=self.artist or '',
+                title=self.title or '',
+                album=self.album or ''
             )
         except AttributeError:  # Missing tags?
             return None
